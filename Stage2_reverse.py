@@ -10,7 +10,8 @@ def STAGE2_reverse():
     REVERSE_url = 'http://challenge.code2040.org/api/reverse'
     
     r = requests.post(REVERSE_url, data = {'token': API_token})
-    reversed = r.text[::-1]
+    #reversal of string
+    reversed = r.text[::-1] 
     
     VALIDATE_url = 'http://challenge.code2040.org/api/reverse/validate'
     r = requests.post(VALIDATE_url, data = {'token': API_token, 'string': reversed})
