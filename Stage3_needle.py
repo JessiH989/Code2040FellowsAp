@@ -8,8 +8,7 @@ import json
 def STAGE3_needle():
     API_token = 'c3ef305c42d60f1ef3eda0527c743cb2'
     ENDPOINT_url = 'http://challenge.code2040.org/api/haystack'
-    VALIDATE_url = 'http://challenge.code2040.org/api/haystack/validate'
-
+   
     r = requests.post(ENDPOINT_url, data = {'token': API_token})
     
     dict = r.json()
@@ -19,6 +18,8 @@ def STAGE3_needle():
 
     #Pulling out the NEEDLE from the "HAYSTACK"
     index = haystack.index(needle)
+    
+    VALIDATE_url = 'http://challenge.code2040.org/api/haystack/validate'
 
     r = requests.post(VALIDATE_url, data = {'token':API_token, 'needle': index})
 
