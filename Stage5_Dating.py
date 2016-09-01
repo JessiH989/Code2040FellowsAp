@@ -19,6 +19,7 @@ def STAGE5_dating():
     datestamp = dict['datestamp']
     interval = dict['interval']
     
+    #Converted string to date object
     DATESTAMP_obj = datetime.datetime.strptime(datestamp, '%Y-%m-%dT%H:%M:%SZ')
     
     #Add interval to date
